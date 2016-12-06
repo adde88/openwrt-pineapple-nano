@@ -653,6 +653,15 @@ define Device/oolite
 endef
 TARGET_DEVICES += oolite
 
+define Device/pineapple
+    $(Device/tplink-16mlzma)
+    BOARDNAME := PINEAPPLE-NANO
+    DEVICE_PROFILE := PINEAPPLE
+    TPLINK_HWID := 0x4e414e4f
+    CONSOLE := ttyATH0,115200
+endef
+TARGET_DEVICES += pineapple
+
 rootfs_type=$(patsubst jffs2-%,jffs2,$(patsubst squashfs-%,squashfs,$(1)))
 
 # $(1): rootfs type.

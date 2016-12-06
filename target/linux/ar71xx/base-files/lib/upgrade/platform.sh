@@ -312,6 +312,7 @@ platform_check_image() {
 	mc-mac1200r | \
 	onion-omega | \
 	oolite | \
+	pineapple | \
 	smart-300 | \
 	tl-mr10u | \
 	tl-mr11u | \

@@ -119,6 +119,9 @@ tplink_board_detect() {
 	"3C0001"*)
 		model="OOLITE"
 		;;
+	"4e414e4f"*)
+		model="pineapple"
+		;;
 	"070300"*)
 		model="TP-Link TL-WR703N"
 		;;
@@ -316,6 +319,9 @@ ar71xx_board_detect() {
 	case "$machine" in
 	*"Oolite V1.0")
 		name="oolite"
+		;;
+	*"Pineapple NANO")
+		name="pineapple"
 		;;
 	*"AC1750DB")
 		name="f9k1115v2"
