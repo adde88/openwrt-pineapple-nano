@@ -22,7 +22,7 @@ Subject: [PATCH 024/114] config: Enable CONFIG_MEMCG, but leave it disabled
  CONFIG_SCHED_AUTOGROUP=y
 --- a/kernel/cgroup.c
 +++ b/kernel/cgroup.c
-@@ -5322,6 +5322,29 @@ static int __init cgroup_disable(char *s
+@@ -5319,6 +5319,29 @@ static int __init cgroup_disable(char *s
  }
  __setup("cgroup_disable=", cgroup_disable);
  
@@ -54,7 +54,7 @@ Subject: [PATCH 024/114] config: Enable CONFIG_MEMCG, but leave it disabled
  	printk("cgroup: using legacy files on the default hierarchy\n");
 --- a/mm/memcontrol.c
 +++ b/mm/memcontrol.c
-@@ -6207,6 +6207,7 @@ struct cgroup_subsys memory_cgrp_subsys
+@@ -6208,6 +6208,7 @@ struct cgroup_subsys memory_cgrp_subsys
  	.bind = mem_cgroup_bind,
  	.legacy_cftypes = mem_cgroup_files,
  	.early_init = 0,

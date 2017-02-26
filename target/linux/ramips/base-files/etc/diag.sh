@@ -63,6 +63,9 @@ get_status_led() {
 	esr-9753)
 		status_led="esr-9753:orange:power"
 		;;
+	ex2700)
+		status_led="ex2700:red:power"
+		;;
 	f5d8235-v2)
 		status_led="f5d8235v2:blue:router"
 		;;
@@ -84,6 +87,10 @@ get_status_led() {
 	all0239-3g|\
 	hw550-3g)
 		status_led="hw550-3g:green:status"
+		;;
+	linkits7688| \
+	linkits7688d)
+		[ "$1" = "upgrade" ] && status_led="mediatek:orange:wifi"
 		;;
 	m2m)
 		status_led="m2m:blue:wifi"
@@ -175,6 +182,9 @@ get_status_led() {
 	whr-g300n)
 		status_led="whr-g300n:green:router"
 		;;
+	wizfi630a)
+		status_led="wizfi630a::run"
+		;;
 	wmr300)
 		status_led="buffalo:green:status"
 		;;
@@ -240,6 +250,9 @@ get_status_led() {
 	y1s)
 		status_led="lenovo:blue:power"
 		;;
+	zbt-wg2626)
+		status_led="zbt-wg2626:green:status"
+		;;
 	zte-q7)
 		status_led="zte:red:status"
 		;;
@@ -247,7 +260,7 @@ get_status_led() {
 }
 
 set_state() {
-	get_status_led
+	get_status_led $1
 
 	case "$1" in
 	preinit)
@@ -256,6 +269,7 @@ set_state() {
 	failsafe)
 		status_led_blink_failsafe
 		;;
+	upgrade | \
 	preinit_regular)
 		status_led_blink_preinit_regular
 		;;

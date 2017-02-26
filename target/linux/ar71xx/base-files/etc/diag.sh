@@ -12,9 +12,11 @@ get_status_led() {
 	all0305)
 		status_led="eap7660d:green:ds4"
 		;;
-	antminer-s1|\
+	antminer-s1)
+		status_led="antminer-s1:green:system"
+		;;
 	antminer-s3)
-		status_led="bitmain:green:system"
+		status_led="antminer-s3:green:system"
 		;;
 	ap132)
 		status_led="ap132:green:status"
@@ -38,6 +40,9 @@ get_status_led() {
 	aw-nr580)
 		status_led="aw-nr580:green:ready"
 		;;
+	bsb)
+		status_led="bsb:red:sys"
+		;;
 	bullet-m | rocket-m | rocket-m-xw | nano-m | nanostation-m | nanostation-m-xw | loco-m-xw)
 		status_led="ubnt:green:link4"
 		;;
@@ -58,6 +63,7 @@ get_status_led() {
 	dir-505-a1 |\
 	dir-600-a1 |\
 	dir-615-e1 |\
+	dir-615-i1 |\
 	dir-615-e4)
 		status_led="d-link:green:power"
 		;;
@@ -79,6 +85,9 @@ get_status_led() {
 		;;
 	dragino2)
 		status_led="dragino2:red:system"
+		;;
+	dw33d)
+		status_led="dw33d:blue:status"
 		;;
 	eap300v2)
 		status_led="engenius:blue:power"
@@ -137,6 +146,10 @@ get_status_led() {
 	mr600v2)
 		status_led="mr600:blue:power"
 		;;
+	mr1750 | \
+	mr1750v2)
+		status_led="mr1750:blue:power"
+		;;
 	mr900 | \
 	mr900v2)
 		status_led="mr900:blue:power"
@@ -162,12 +175,17 @@ get_status_led() {
 	om2pv2 | \
 	om2p-hs | \
 	om2p-hsv2 | \
+	om2p-hsv3 | \
 	om2p-lc)
 		status_led="om2p:blue:power"
 		;;
 	om5p | \
 	om5p-an)
 		status_led="om5p:blue:power"
+		;;
+	om5p-ac | \
+	om5p-acv2)
+		status_led="om5pac:blue:power"
 		;;
 	onion-omega)
 		status_led="onion:amber:system"
@@ -209,6 +227,9 @@ get_status_led() {
 	smart-300)
 		status_led="nc-link:green:system"
 		;;
+	minibox-v1)
+		status_led="minibox-v1:green:system"
+		;;
 	oolite)
 		status_led="oolite:red:system"
 		;;
@@ -249,6 +270,7 @@ get_status_led() {
 	tl-wa901nd | \
 	tl-wa901nd-v2 | \
 	tl-wa901nd-v3 | \
+	tl-wa901nd-v4 | \
 	tl-wdr3500 | \
 	tl-wr1041n-v2 | \
 	tl-wr1043nd | \
@@ -258,6 +280,7 @@ get_status_led() {
 	tl-wr841n-v1 | \
 	tl-wr841n-v7 | \
 	tl-wr841n-v8 | \
+	tl-wr841n-v11 | \
 	tl-wa830re-v2 | \
 	tl-wr842n-v2 | \
 	tl-wr941nd | \
@@ -273,7 +296,8 @@ get_status_led() {
 	tl-wdr4300 | \
 	tl-wr703n | \
 	tl-wr710n | \
-	tl-wr720n-v3)
+	tl-wr720n-v3 | \
+	tl-wr941nd-v6)
 		status_led="tp-link:blue:system"
 		;;
 	tl-wr841n-v9)
@@ -318,7 +342,8 @@ get_status_led() {
 	wnr2000 | \
 	wnr2200 |\
 	wnr612-v2 |\
-	wnr1000-v2)
+	wnr1000-v2 |\
+	wpn824n)
 		status_led="netgear:green:power"
 		;;
 	wp543)
@@ -335,6 +360,9 @@ get_status_led() {
 		;;
 	wrt400n)
 		status_led="wrt400n:blue:wps"
+		;;
+	e2100l)
+		status_led="e2100l:blue:wps"
 		;;
 	wrt160nl)
 		status_led="wrt160nl:blue:wps"
